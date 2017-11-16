@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    image: hseeberger/scala-sbt
+    container_name: scala
+    working_dir: /usr/src
+    volumes:
+      - ./app:/usr/src
+      - ivy:/root/.ivy2
+      - sbt:/root/.sbt
+    tty: true
+
+volumes:
+  ivy:
+  sbt:
