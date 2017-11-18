@@ -23,7 +23,10 @@ object Equation{
     } else {
       val rx = round(x)
       val ry = round(y)
-      println(s"x = $rx  y = $ry")
+      if (rx == 0 && ry == 0)
+        println("解が複数存在します")
+      else
+        println(s"x = $rx  y = $ry")
     }
   }
 
