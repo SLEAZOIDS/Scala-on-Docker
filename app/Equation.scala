@@ -18,9 +18,13 @@ object Equation{
     val be = DenseVector(b, e)
     val cf = DenseVector(c, f)
     val (x, y) = solve(ad, be, cf)
-    val rx = round(x)
-    val ry = round(y)
-    println(s"x = $rx  y = $ry")
+    if (x.isInfinite) {
+      println("解が存在しません")
+    } else {
+      val rx = round(x)
+      val ry = round(y)
+      println(s"x = $rx  y = $ry")
+    }
   }
 
   def solve(ad: DenseVector[Double], be: DenseVector[Double], cf: DenseVector[Double]): (Double, Double) = {
