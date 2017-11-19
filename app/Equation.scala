@@ -39,12 +39,10 @@ object Equation{
     if (x.isInfinite) {
       println("解が存在しません")
     } else {
-      val rx = round(x)
-      val ry = round(y)
-      if (rx == 0 && ry == 0)
+      if (round(x) == 0 && round(y) == 0)
         println("解が複数存在します")
       else
-        println(s"x = $rx  y = $ry")
+        println(s"x = $x, y = $y")
     }
   }
 
