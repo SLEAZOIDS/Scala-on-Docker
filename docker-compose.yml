@@ -2,7 +2,7 @@ version: '3'
 
 services:
   app:
-    image: hseeberger/scala-sbt
+    build: .
     container_name: scala
     working_dir: /usr/src
     volumes:
